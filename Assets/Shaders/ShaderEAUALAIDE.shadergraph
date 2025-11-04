@@ -29,6 +29,9 @@
         },
         {
             "m_Id": "6b7d99fbc4b347eb9ed426530bca1f6f"
+        },
+        {
+            "m_Id": "29b479e8d1ab4e9389828216d630eb1a"
         }
     ],
     "m_Keywords": [],
@@ -859,8 +862,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 1537.3333740234375,
-            "y": 892.0001220703125
+            "x": 1661.9998779296875,
+            "y": 890.0
         },
         "m_Blocks": [
             {
@@ -1543,6 +1546,34 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector2ShaderProperty",
+    "m_ObjectId": "29b479e8d1ab4e9389828216d630eb1a",
+    "m_Guid": {
+        "m_GuidSerialized": "6ba6e0b9-124c-4540-a609-f6f28d310b84"
+    },
+    "m_Name": "MinMaxDistance",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "MinMaxDistance",
+    "m_DefaultReferenceName": "_MinMaxDistance",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
     "m_ObjectId": "2c10be5a95a440c58d98f52449d9e38b",
@@ -1999,7 +2030,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Vector1_F8E08842",
     "m_StageCapability": 3,
-    "m_Value": 25.0,
+    "m_Value": 50.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
 }
@@ -2227,7 +2258,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Vector1_F8E08842",
     "m_StageCapability": 3,
-    "m_Value": 30.0,
+    "m_Value": 70.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
 }
@@ -3055,9 +3086,9 @@
     "m_ShaderOutputName": "BaseColor",
     "m_StageCapability": 2,
     "m_Value": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
+        "x": 0.7735849022865295,
+        "y": 0.7735849022865295,
+        "z": 0.7735849022865295
     },
     "m_DefaultValue": {
         "x": 0.5,
@@ -4553,6 +4584,9 @@
         },
         {
             "m_Id": "6b7d99fbc4b347eb9ed426530bca1f6f"
+        },
+        {
+            "m_Id": "29b479e8d1ab4e9389828216d630eb1a"
         }
     ]
 }
