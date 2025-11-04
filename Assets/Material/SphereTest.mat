@@ -64,6 +64,7 @@ Material:
     - _movingSpeed: 0.3
     - _noiseScale: 5
     - _objectScreenPosition: 0
+    - _threshold: 0.03
     m_Colors:
     - _MouseScreenPosition: {r: 722, g: 636, b: 0, a: 0}
     - _objectScreenPosition: {r: 222.66078, g: 248.97517, b: 0, a: 0}
