@@ -44,10 +44,15 @@ Material:
     m_Floats:
     - _Amplitude: 0.1
     - _Glossiness: 0.5
+    - _HighlightThreshold: 0.5
     - _Invert: 0
+    - _MainThreshold: 0.3
     - _Metallic: 0
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RippleCount: 5
+    - _RippleSpeed: 2
+    - _RippleStrenght: 1
     - _Wave_frequency: 1
     - _Wave_speed: 2
     - _distanceforMaxDisplacement: 0.1
@@ -56,6 +61,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _MinMaxDistance: {r: 3, g: 14.3, b: 0, a: 0}
     - _MouseScreenPosition: {r: 0, g: 0, b: 0, a: 0}
+    - _RippleCenter: {r: 0, g: 0, b: 0, a: 0}
     - _objectScreenPosition: {r: 0, g: 0, b: 0, a: 0}
     - _wave_direction_xz: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
