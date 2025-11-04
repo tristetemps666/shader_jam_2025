@@ -51,12 +51,21 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _ChooseDistanceCalculation: 0
+    - _Invert: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _displacementMax: 0
+    - _checkDistanceForEveryPixel: 1
+    - _displacementMax: 2
+    - _distanceForMaxDisplacement: 0.1
+    - _distanceForMinDisplacement: 0.05
     - _distanceMax: 50
-    - _movingSpeed: 0.5
+    - _distanceMouseObject: 0
+    - _movingSpeed: 0.3
+    - _noiseScale: 5
+    - _objectScreenPosition: 0
     m_Colors:
-    - _MouseScreenPosition: {r: 0, g: 0, b: 0, a: 0}
+    - _MouseScreenPosition: {r: 722, g: 636, b: 0, a: 0}
+    - _objectScreenPosition: {r: 222.66078, g: 248.97517, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
