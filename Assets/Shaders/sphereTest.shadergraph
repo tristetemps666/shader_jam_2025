@@ -6151,7 +6151,7 @@
     "m_ObjectId": "80c39de8e06a4a708f0584fb7bdfb37b",
     "m_Title": "Noie Displacement",
     "m_Position": {
-        "x": -2837.999755859375,
+        "x": -2838.0,
         "y": -641.0
     }
 }
@@ -7390,8 +7390,8 @@
     "m_ObjectId": "a28684f5bd5a476cbe995603c7791e81",
     "m_Title": "Fix aspect ratio stretch",
     "m_Position": {
-        "x": -3813.999755859375,
-        "y": 1714.999755859375
+        "x": -3814.0,
+        "y": 1715.0
     }
 }
 
@@ -8883,8 +8883,8 @@
     "m_ObjectId": "c56c710ebb754f2480cd5fd9086c1123",
     "m_Title": "Distance Calculation",
     "m_Position": {
-        "x": -4869.99951171875,
-        "y": 1156.9998779296875
+        "x": -4870.0,
+        "y": 1157.0
     }
 }
 
@@ -9341,7 +9341,7 @@
     "m_ObjectId": "d295ef8ec2e3440191abb039ed06e852",
     "m_Title": "Poserize",
     "m_Position": {
-        "x": 223.0000457763672,
+        "x": 223.0,
         "y": 47.0
     }
 }
