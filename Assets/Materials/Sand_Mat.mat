@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MaterialEAUALAIDE
-  m_Shader: {fileID: -6465566751694194690, guid: cbd40e2c55cafad478c9e2f552269dba, type: 3}
+  m_Name: Sand_Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 489978c64826f2946bc2c22b754004b0, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,8 +24,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
+    - _NormalFromTexture_886c50677d274ff69b6ae66f91da67aa_Texture_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 37e29490ac8c58b489b34810c279c3bc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_ee4348dc29a74e0caf5a391fef76bc33_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 37e29490ac8c58b489b34810c279c3bc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -42,33 +46,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Amplitude: 0.1
-    - _Distance: 5
-    - _Distance_Depth: 0
-    - _Glossiness: 0.5
-    - _HighlightThreshold: 0.5
-    - _Invert: 0
-    - _MainThreshold: 0.3
-    - _Metallic: 0
+    - _Distance: 50
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RippleCount: 5
-    - _RippleSpeed: 2
-    - _RippleStrenght: 1
-    - _Wave_frequency: 1
-    - _Wave_speed: 2
-    - _distanceforMaxDisplacement: 0.1
-    - _distanceforMinDisplacement: 0.001
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _MinMaxDistance: {r: 3, g: 14.3, b: 0, a: 0}
-    - _MouseScreenPosition: {r: 0, g: 0, b: 0, a: 0}
-    - _RippleCenter: {r: 0, g: 0, b: 0, a: 0}
-    - _objectScreenPosition: {r: 0, g: 0, b: 0, a: 0}
-    - _wave_direction_xz: {r: 1, g: 1, b: 0, a: 0}
+    - _UVSize: 15
+    m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &9102001105069409838
+--- !u!114 &3935252073302669968
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
