@@ -61,10 +61,14 @@ Material:
     - _distanceForMinDisplacement: 0.1
     - _distanceMax: 50
     - _distanceMouseObject: 0
+    - _heightStep: 5
     - _movingSpeed: 0.3
-    - _noiseScale: 5
+    - _noiseScale: 3
     - _objectScreenPosition: 0
     - _threshold: 0.03
+    - _timeStep: 12
+    - _useHeightStep: 1
+    - _useTimeStep: 0
     m_Colors:
     - _MouseScreenPosition: {r: 722, g: 636, b: 0, a: 0}
     - _objectScreenPosition: {r: 222.66078, g: 248.97517, b: 0, a: 0}
