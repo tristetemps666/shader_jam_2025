@@ -34,5 +34,10 @@ public class MaterialManager : MonoBehaviour
 
         _material.SetVector("_MouseScreenPosition", mousePosition2D);
         _material.SetVector("_objectScreenPosition", objectScreenPosition2D);
+
+        if(_renderer.material != _material)
+        {
+            _material = _renderer.material;
+        }
     }
 }
