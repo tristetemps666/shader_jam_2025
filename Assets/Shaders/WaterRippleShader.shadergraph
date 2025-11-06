@@ -2440,7 +2440,7 @@
     "m_ObjectId": "31f34058e6e04aaab86a7e383accf70c",
     "m_Title": "Cible les valeurs hautes pour faire les bords qui brillent",
     "m_Position": {
-        "x": -1914.666748046875,
+        "x": -1914.6666259765625,
         "y": -1091.3333740234375
     }
 }
@@ -2927,7 +2927,7 @@
     "m_Title": "Noise texture pour l'eau",
     "m_Position": {
         "x": -5056.00048828125,
-        "y": -1450.666748046875
+        "y": -1450.66650390625
     }
 }
 
@@ -4931,8 +4931,8 @@
     "m_ObjectId": "9f375bf7906e4d4e919f334ccd01dfa2",
     "m_Title": "Cible les valeurs basses pour l'effet classique",
     "m_Position": {
-        "x": -1934.0003662109375,
-        "y": -692.0
+        "x": -1934.0001220703125,
+        "y": -691.9998779296875
     }
 }
 
@@ -6338,7 +6338,7 @@
     "m_Title": "Cible les valeurs hautes pour faire les bords qui brillent",
     "m_Position": {
         "x": 682.0001220703125,
-        "y": 2332.00048828125
+        "y": 2332.000244140625
     }
 }
 
@@ -6744,8 +6744,8 @@
     "m_ObjectId": "dd4530fc6188476595225f3986738b15",
     "m_Title": "Cible les valeurs basses pour l'effet classique",
     "m_Position": {
-        "x": 662.6666870117188,
-        "y": 2731.333251953125
+        "x": 662.666748046875,
+        "y": 2731.3330078125
     }
 }
 

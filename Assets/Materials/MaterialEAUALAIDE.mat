@@ -20,7 +20,7 @@ Material:
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
-  m_LockedProperties: 
+  m_LockedProperties: _RefractionStrenght
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -50,20 +50,26 @@ Material:
     - _Invert: 0
     - _MainThreshold: 0.3
     - _Metallic: 0
+    - _Normal_Strenght: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RefractionStrenght: 2
     - _RippleCount: 5
     - _RippleSpeed: 2
     - _RippleStrenght: 1
+    - _WaterDepth: 7.26
     - _Wave_frequency: 1
     - _Wave_speed: 2
     - _distanceforMaxDisplacement: 0.1
     - _distanceforMinDisplacement: 0.001
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DepthWater: {r: 0.012400578, g: 0.086421646, b: 0.2075471, a: 0.19607843}
+    - _Foam_color: {r: 1, g: 1, b: 1, a: 0}
     - _MinMaxDistance: {r: 3, g: 14.3, b: 0, a: 0}
     - _MouseScreenPosition: {r: 0, g: 0, b: 0, a: 0}
     - _RippleCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _ShallowWater: {r: 0.31760988, g: 0.742063, b: 1, a: 0}
     - _objectScreenPosition: {r: 0, g: 0, b: 0, a: 0}
     - _wave_direction_xz: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
