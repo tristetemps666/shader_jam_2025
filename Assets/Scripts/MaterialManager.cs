@@ -7,6 +7,7 @@ public class MaterialManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    [SerializeField]
     private Camera _camera;
 
     [SerializeField]
@@ -20,7 +21,10 @@ public class MaterialManager : MonoBehaviour
 
     private void Awake()
     {
-        _camera = Camera.main;
+        if (_camera == null)
+        {
+            _camera = Camera.main;
+        }
         _renderer = GetComponent<Renderer>();
         _material = _renderer.material;
     }

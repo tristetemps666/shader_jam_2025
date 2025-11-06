@@ -25,17 +25,6 @@ public class AgentBehavior : MonoBehaviour
         _duckGameplayActions["DuckClick"].performed += SelectDestination;
     }
 
-    // public void ClickDuck(InputAction.CallbackContext context)
-    // {
-    //     if (context.started) { }
-    //     else if (context.performed)
-    //     {
-    //         SelectDestination();
-    //     }
-    //     else if (context.canceled) { }
-    // }
-
-    // Update is called once per frame
     void Update() { }
 
     private void SelectDestination(InputAction.CallbackContext context)
