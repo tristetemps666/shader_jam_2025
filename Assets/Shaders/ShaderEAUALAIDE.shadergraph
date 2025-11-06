@@ -1538,8 +1538,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 3869.333740234375,
-            "y": 824.0
+            "x": 3874.6669921875,
+            "y": 694.0
         },
         "m_Blocks": [
             {
@@ -1993,21 +1993,21 @@
             "a": 1.0
         },
         "key1": {
-            "r": 0.4748426675796509,
-            "g": 0.8381047248840332,
-            "b": 1.0,
+            "r": 0.11617416888475418,
+            "g": 0.3077896237373352,
+            "b": 0.4150943160057068,
             "a": 1.0
         },
         "key2": {
-            "r": 1.0,
-            "g": 1.0,
+            "r": 0.4748426675796509,
+            "g": 0.8381047248840332,
             "b": 1.0,
             "a": 0.0
         },
         "key3": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
             "a": 0.0
         },
         "key4": {
@@ -2035,9 +2035,9 @@
             "a": 0.0
         },
         "ctime0": 0,
-        "ctime1": 41763,
-        "ctime2": 65535,
-        "ctime3": 0,
+        "ctime1": 36880,
+        "ctime2": 53713,
+        "ctime3": 65535,
         "ctime4": 0,
         "ctime5": 0,
         "ctime6": 0,
@@ -2052,7 +2052,7 @@
         "atime7": 0,
         "m_Mode": 0,
         "m_ColorSpace": -1,
-        "m_NumColorKeys": 3,
+        "m_NumColorKeys": 4,
         "m_NumAlphaKeys": 2
     },
     "m_DefaultValue": {
@@ -2251,8 +2251,8 @@
     "m_ObjectId": "0bebeb05e9d3409586822e2a6f027437",
     "m_Title": "Cible les valeurs basses pour l'effet classique",
     "m_Position": {
-        "x": -717.9996948242188,
-        "y": 841.333251953125
+        "x": -717.9999389648438,
+        "y": 841.3333129882813
     }
 }
 
@@ -2858,8 +2858,8 @@
     "m_ObjectId": "21b0c0cfe73b44f4b452cf61497ce413",
     "m_Title": "Noise texture pour l'eau",
     "m_Position": {
-        "x": -3893.999267578125,
-        "y": 356.6666259765625
+        "x": -3894.0,
+        "y": 356.6666564941406
     }
 }
 
@@ -3373,7 +3373,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "X",
     "m_StageCapability": 3,
-    "m_Value": 1.0,
+    "m_Value": 1.2000000476837159,
     "m_DefaultValue": 0.0,
     "m_Labels": []
 }
@@ -3885,7 +3885,7 @@
     "m_ObjectId": "3bdd285e9e0840f0ad67ec5cf1171320",
     "m_Title": "Cible les valeurs hautes pour faire les bords qui brillent",
     "m_Position": {
-        "x": -698.6663818359375,
+        "x": -698.6666870117188,
         "y": 442.0
     }
 }
@@ -4401,10 +4401,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1153.3333740234375,
-            "y": 491.3333740234375,
-            "width": 209.3333740234375,
-            "height": 303.99993896484377
+            "x": -1058.0,
+            "y": 530.6666870117188,
+            "width": 209.33331298828126,
+            "height": 304.00006103515627
         }
     },
     "m_Slots": [
@@ -9000,8 +9000,8 @@
     "m_ObjectId": "d97f30e0cd13418dbfe8bf499283cc46",
     "m_Title": "Génération de wave",
     "m_Position": {
-        "x": -2576.6669921875,
-        "y": -1181.3331298828125
+        "x": -2576.666748046875,
+        "y": -1181.3333740234375
     }
 }
 
@@ -9121,7 +9121,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Y",
     "m_StageCapability": 3,
-    "m_Value": 1.0,
+    "m_Value": 1.2000000476837159,
     "m_DefaultValue": 0.0,
     "m_Labels": [
         "Y"
@@ -9611,8 +9611,8 @@
     "m_ObjectId": "e9ff26daeb6447c79d12569c66f8cb44",
     "m_Title": "Cursor fonction",
     "m_Position": {
-        "x": -273.999755859375,
-        "y": -139.33331298828126
+        "x": -274.0,
+        "y": -139.3333282470703
     }
 }
 
