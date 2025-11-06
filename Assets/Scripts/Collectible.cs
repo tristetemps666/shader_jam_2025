@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,7 +11,7 @@ public class Collectible : MonoBehaviour
     private int _value = 10;
 
     [SerializeField]
-    Renderer _collectedRenderer;
+    List<Renderer> _collectedRenderer = new();
 
     [SerializeField]
     private Transform _spawnCollectibleParticles;
@@ -17,6 +19,7 @@ public class Collectible : MonoBehaviour
     private bool _collected = false;
 
     public int GetValue() => _value;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,7 +35,7 @@ public class Collectible : MonoBehaviour
 
             OnCollected.Invoke();
 
-            _collectedRenderer.enabled = false;
+            HideRenderers(_collectedRenderer);
             Destroy(gameObject, 10f);
         }
     }
@@ -40,7 +43,19 @@ public class Collectible : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _collectedRenderer = GetComponentInChildren<Renderer>();
+        _collectedRenderer = GetComponentsInChildren<Renderer>().ToList();
+    }
+
+    void HideRenderers(List<Renderer> renderers)
+    {
+        foreach(Renderer renderer in renderers)
+        {
+            var rendererParticle = renderer as ParticleSystemRenderer;
+            if(rendererParticle == null)
+            {
+                renderer.enabled = false;
+            }
+        }
     }
 
     // Update is called once per frame

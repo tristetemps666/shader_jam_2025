@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class PlayerCollectibleManager : MonoBehaviour
 {
-    public UnityEvent<Transform> OnCollectiblePicked = new UnityEvent<Transform>();
+    public UnityEvent<int?> OnCoinAmmountIncrease = new UnityEvent<int?>();
 
     [SerializeField, ReadOnly(true)]
     private int _totalCoinAmount = 0;
@@ -12,8 +12,9 @@ public class PlayerCollectibleManager : MonoBehaviour
     public void CollectCoin(int coinValue, Transform coinPosition)
     {
         _totalCoinAmount += coinValue;
-        OnCollectiblePicked.Invoke(coinPosition);
+        OnCoinAmmountIncrease.Invoke(_totalCoinAmount);
     }
+
 
     private void Start() { }
 
