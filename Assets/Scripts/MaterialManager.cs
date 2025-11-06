@@ -7,11 +7,13 @@ public class MaterialManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    [SerializeField]
-    Camera _camera;
+    private Camera _camera;
 
     [SerializeField]
-    Vector2 mousePosition2D;
+    private Transform _transformToCheck;
+
+    [SerializeField]
+    private Vector2 mousePosition2D;
 
     private Material _material;
     private Renderer _renderer;
@@ -30,12 +32,18 @@ public class MaterialManager : MonoBehaviour
         mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
 
         // screen position of the object.
-        Vector2 objectScreenPosition2D = _camera.WorldToScreenPoint(transform.position);
+        Vector2 objectScreenPosition2D =
+            _transformToCheck == null
+                ? Vector2.zero
+                : _camera.WorldToScreenPoint(_transformToCheck.position);
+
+        Vector2 objectDisplacedPosition2D = _camera.WorldToScreenPoint(transform.position);
 
         _material.SetVector("_MouseScreenPosition", mousePosition2D);
-        _material.SetVector("_objectScreenPosition", objectScreenPosition2D);
+        _material.SetVector("_objectScreenPosition", objectDisplacedPosition2D);
+        _material.SetVector("_ObjectToCheckPosition", objectScreenPosition2D);
 
-        if(_renderer.material != _material)
+        if (_renderer.material != _material)
         {
             _material = _renderer.material;
         }

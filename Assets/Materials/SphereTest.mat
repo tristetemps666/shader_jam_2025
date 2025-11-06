@@ -55,6 +55,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _CheckMousePositionOrObject: 1
     - _ChooseDistanceCalculation: 0
     - _Invert: 0
     - _QueueControl: 1
@@ -69,7 +70,7 @@ Material:
     - _movingSpeed: 0.3
     - _noiseScale: 3
     - _objectScreenPosition: 0
-    - _posterizeFactor: 0.5
+    - _posterizeFactor: 0.526
     - _threshold: 0.03
     - _timeStep: 12
     - _useHeightStep: 1
@@ -77,6 +78,7 @@ Material:
     - _useTimeStep: 0
     m_Colors:
     - _MouseScreenPosition: {r: 722, g: 636, b: 0, a: 0}
+    - _ObjectToCheckPosition: {r: 0, g: 0, b: 0, a: 0}
     - _objectScreenPosition: {r: 222.66078, g: 248.97517, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

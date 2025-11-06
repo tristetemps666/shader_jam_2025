@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1952039765}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 722, y: 636}
 --- !u!4 &12694293 stripped
 Transform:
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1952039765}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 722, y: 636}
 --- !u!4 &248069845 stripped
 Transform:
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1952039765}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 722, y: 636}
 --- !u!4 &593993894 stripped
 Transform:
@@ -589,7 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1952039765}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 722, y: 636}
 --- !u!4 &775147337 stripped
 Transform:
@@ -721,13 +721,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1952039765}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 722, y: 636}
 --- !u!4 &1028486270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7cc50655e0a78ce4eade04f6a394a6a8, type: 3}
   m_PrefabInstance: {fileID: 1028486265}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1130887559
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.38
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 2.2766344e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -1.9626156e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+      propertyPath: m_Name
+      value: coolnard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
 --- !u!1 &1474603281 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 95c5e8edbdf2086409f36ac4c88d0735, type: 3}
@@ -745,8 +818,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
+  _transformToCheck: {fileID: 1628206079}
   mousePosition2D: {x: 0, y: 0}
+--- !u!4 &1628206079 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1ea55ca8142eed4e9c2168abb411c93, type: 3}
+  m_PrefabInstance: {fileID: 1130887559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1705110246
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,7 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1952039765}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 722, y: 636}
 --- !u!1001 &1884586204
 PrefabInstance:
@@ -1076,7 +1154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1952039765}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 722, y: 636}
 --- !u!4 &1884586209 stripped
 Transform:
@@ -1337,7 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1952039765}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 722, y: 636}
 --- !u!4 &1977611789 stripped
 Transform:
@@ -1429,7 +1507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1952039765}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 722, y: 636}
 --- !u!4 &2050355907 stripped
 Transform:
@@ -1642,7 +1720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 0, y: 0}
 --- !u!1001 &2134138760
 PrefabInstance:
@@ -1729,7 +1807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378c37794f1de6e478485925ca3dd50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1952039765}
+  _transformToCheck: {fileID: 0}
   mousePosition2D: {x: 722, y: 636}
 --- !u!4 &2134138765 stripped
 Transform:
@@ -1747,3 +1825,4 @@ SceneRoots:
   - {fileID: 2107364197}
   - {fileID: 2071467422}
   - {fileID: 267299240}
+  - {fileID: 1130887559}
