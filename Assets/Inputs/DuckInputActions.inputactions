@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "DuckInputActions",
+    "maps": [
+        {
+            "name": "ClickDuckDestination",
+            "id": "53bc756c-43ad-4f78-a7e8-ff14ee12559c",
+            "actions": [
+                {
+                    "name": "ClickDuck",
+                    "type": "Button",
+                    "id": "f4ad8e58-e19f-4db1-947d-83ec972915c1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4b1f2aa7-c45f-4a8b-b6ed-fd0e02f8a527",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickDuck",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

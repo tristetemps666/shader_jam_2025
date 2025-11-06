@@ -62,8 +62,8 @@ Material:
     - _QueueOffset: 0
     - _checkDistanceForEveryPixel: 1
     - _displacementMax: 2
-    - _distanceForMaxDisplacement: 0.2
-    - _distanceForMinDisplacement: 0.1
+    - _distanceForMaxDisplacement: 0.23
+    - _distanceForMinDisplacement: 0.07
     - _distanceMax: 50
     - _distanceMouseObject: 0
     - _heightStep: 5
