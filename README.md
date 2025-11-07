@@ -2,10 +2,18 @@
 
 Rendu du projet Unity.
 
-[images de DUCK DUCK DUCK](/ScreenShots/img1.jpg)
+![images de DUCK DUCK DUCK](/ScreenShots/img1.jpg)
+![images de DUCK DUCK DUCK](/ScreenShots/img4.jpg)
+![images de DUCK DUCK DUCK](/ScreenShots/img6.jpg)
+
+ <p align=center>&darr;Video de Gameplay &darr;<p>
+ 
+[![alt text](/ScreenShots/img1.jpg)](https://www.youtube.com/watch?v=T-PZcHSlMVA)
 
 ### Présentation
 DUCK DUCK DUCK est un petit jeu où l'on incarne un petit canard qui s'appelle DUCK et qui mange les arbres ! Le est gagné quand on mange tous les arbres !!!
+
+
 
 ### Contrôles
 **CLICK GAUCHE** &rarr; déplacer DUCK
