@@ -27,6 +27,11 @@ public class UiManager : MonoBehaviour
         StartCoroutine(Fade(canvastoFade, false));
     }
 
+    public void Appear(CanvasGroup canvastoPop)
+    {
+        StartCoroutine(Fade(canvastoPop, true));
+    }
+
 
     private IEnumerator Fade(CanvasGroup canvastoFade, bool Fade)
     {

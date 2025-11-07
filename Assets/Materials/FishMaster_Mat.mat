@@ -51,8 +51,8 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SmoothFactor: 6
-    - _TimeFactor: 5
-    - _TimeFactorY: 1
+    - _TimeFactor: 7
+    - _TimeFactorY: 2
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

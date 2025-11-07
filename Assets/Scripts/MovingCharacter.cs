@@ -41,10 +41,12 @@ public class MovingCharacter : MonoBehaviour
         MovingSpeed = -(Vector3.Dot(SharkTransform.forward, navmeshagent.velocity));
         //Debug.Log(MovingSpeed);
 
-        if(_gamemanager.IsPauseMenu == false && _gamemanager.IsTitleScreen == false)
+        if(_gamemanager.IsTitleScreen == true | _gamemanager.IsPauseMenu == true)
         {
-            IsAbletoEat = true;
+            IsAbletoEat = false;
         }
+        else { IsAbletoEat=true; }
+        Debug.Log(IsAbletoEat);
 
         if(CheckIfMoving() == true)
         {
