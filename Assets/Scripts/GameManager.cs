@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,10 @@ public enum GameState
 public class GameManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public UnityEvent OnGameUnPaused = new();
+    public UnityEvent OnGamePaused = new();
+    public UnityEvent OnGameStarted = new();
 
     [SerializeField]
     private UIManager _uiManager;
@@ -56,9 +61,11 @@ public class GameManager : MonoBehaviour
         _uiManager.SetPauseUI();
 
         _gameState = GameState.InPause;
+
+        OnGamePaused.Invoke();
     }
 
-    public void UnPauseGame(InputAction.CallbackContext ctx)
+    public void UnPauseGame()
     {
         _uiInputs["UnPause"].Disable();
 
@@ -68,6 +75,13 @@ public class GameManager : MonoBehaviour
         _uiManager.SetGameUI();
 
         _gameState = GameState.InGame;
+
+        OnGameUnPaused.Invoke();
+    }
+
+    public void UnPauseGame(InputAction.CallbackContext ctx)
+    {
+        UnPauseGame();
     }
 
     private void Start()
@@ -109,6 +123,8 @@ public class GameManager : MonoBehaviour
         _uiManager.StartGame();
 
         _uiInputs["Start"].Disable();
+
+        OnGameStarted.Invoke();
     }
 
     private void EnablePlayerControls()

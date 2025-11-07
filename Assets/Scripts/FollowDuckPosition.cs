@@ -12,9 +12,13 @@ public class FollowDuckPosition : MonoBehaviour
 
     private RectTransform _rectTransform;
 
-    public void SetTransformToFollow(Transform transformToFollow)
+    public void SetTransformToFollow(Transform transformToFollow, Vector2? offset = null)
     {
         _transformToFollow = transformToFollow;
+        if (offset != null)
+        {
+            _offset = offset.Value;
+        }
     }
 
     void Start()

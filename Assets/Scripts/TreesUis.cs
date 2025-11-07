@@ -18,6 +18,9 @@ public class TreesUis : MonoBehaviour
     private GameObject _parentUIPause;
 
     [SerializeField]
+    private Vector2 _offset;
+
+    [SerializeField]
     private Color _treeColor;
 
     [SerializeField, ReadOnly(true)]
@@ -36,7 +39,7 @@ public class TreesUis : MonoBehaviour
 
     void InitUI()
     {
-        string uiTreeString = "t\nr\ne\ne";
+        string uiTreeString = "T\nR\nE\nE";
         for (int i = 0; i < _listTreeCollectible.Count; i++)
         {
             var newTreeUI = Instantiate(_textTemplate, _parentUIPause.transform);
@@ -49,8 +52,12 @@ public class TreesUis : MonoBehaviour
             var texTreeUI = newTreeUI.GetComponent<TextMeshProUGUI>();
             texTreeUI.text = uiTreeString;
             texTreeUI.color = _treeColor;
-            var followUIPosition = newTreeUI.AddComponent<FollowDuckPosition>();
-            followUIPosition.SetTransformToFollow(_listTreeCollectible[i].transform);
+            var followUIPosition = newTreeUI.GetComponent<FollowDuckPosition>();
+            if (followUIPosition == null)
+            {
+                followUIPosition = newTreeUI.AddComponent<FollowDuckPosition>();
+            }
+            followUIPosition.SetTransformToFollow(_listTreeCollectible[i].transform, _offset);
 
             _listTreeCollectible[i]
                 .OnCollected.AddListener(() =>
