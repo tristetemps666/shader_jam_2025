@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class AgentBehavior : MonoBehaviour
@@ -12,11 +13,19 @@ public class AgentBehavior : MonoBehaviour
     [SerializeField]
     NavMeshAgent _duckNavMeshAgent;
 
+    [SerializeField]
+    public UnityEvent OnDestinationSelected = new();
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void OnEnable()
     {
         _duckGameplayActions.Enable();
+    }
+
+    void OnDisable()
+    {
+        _duckGameplayActions.Disable();
     }
 
     void Start()
@@ -52,6 +61,7 @@ public class AgentBehavior : MonoBehaviour
             newDestination.z = transform.position.z;
 
             _duckNavMeshAgent.SetDestination(hitPosition);
+            OnDestinationSelected.Invoke();
         }
     }
 }

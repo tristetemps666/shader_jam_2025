@@ -46,6 +46,12 @@ public class AnimateScale : MonoBehaviour
             t += Time.deltaTime * _animationSpeed;
             float scale = _scaleAnimation.Evaluate(t);
 
+            if (!gameObject.activeSelf)
+            {
+                continue;
+            }
+
+
             if (_rectTransform != null)
             {
                 _rectTransform.localScale = Vector3.one * scale;

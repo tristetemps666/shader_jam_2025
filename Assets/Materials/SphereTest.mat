@@ -57,6 +57,7 @@ Material:
     m_Floats:
     - _CheckMousePositionOrObject: 1
     - _ChooseDistanceCalculation: 0
+    - _Float: 0.78
     - _Invert: 0
     - _QueueControl: 1
     - _QueueOffset: 0
