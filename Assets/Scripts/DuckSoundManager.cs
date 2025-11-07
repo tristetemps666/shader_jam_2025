@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class DuckSoundManager : MonoBehaviour
@@ -10,6 +11,9 @@ public class DuckSoundManager : MonoBehaviour
 
     [SerializeField]
     private List<AudioClip> _audioClips = new List<AudioClip>();
+
+    [SerializeField]
+    public UnityEvent OnDuckBark = new();
 
     [SerializeField]
     private AudioSource _audioSource;
@@ -53,6 +57,8 @@ public class DuckSoundManager : MonoBehaviour
         int randomIndex = Random.Range(0, _audioClips.Count);
         var duckSound = _audioClips[randomIndex];
         _audioSource.PlayOneShot(duckSound);
+
+        OnDuckBark.Invoke();
 
         StartCoroutine(DelaySoundActivation());
     }
