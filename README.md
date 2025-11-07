@@ -7,7 +7,7 @@ Rendu du projet Unity.
 ![images de DUCK DUCK DUCK](/ScreenShots/img6.jpg)
 
  <p align=center>&darr;Video de Gameplay &darr;<p>
- 
+
 [![alt text](/ScreenShots/img1.jpg)](https://www.youtube.com/watch?v=T-PZcHSlMVA)
 
 ### Présentation
@@ -17,7 +17,9 @@ DUCK DUCK DUCK est un petit jeu où l'on incarne un petit canard qui s'appelle D
 
 ### Contrôles
 **CLICK GAUCHE** &rarr; déplacer DUCK
+
 **ESPACE** &rarr; faire parler DUCK
+
 **ECHAP** &rarr; entrer / sortir du menu pause
 
 
