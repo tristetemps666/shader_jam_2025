@@ -21,6 +21,7 @@ Liste des choses réalisés en lien avec le cours
 - Animation
 - IA et pathfinding
 - Menu titre, menu pause
+
   Todo :
   - SFX
   - UI overlay
