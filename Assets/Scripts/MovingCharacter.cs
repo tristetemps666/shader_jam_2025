@@ -19,6 +19,13 @@ public class MovingCharacter : MonoBehaviour
     private bool IsMoving;
     private float speedacceleration;
 
+    public bool IsAbletoEat;
+
+    [SerializeField] GameManager _gamemanager;
+
+    [SerializeField]
+    private ScoreManager scoremanager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,35 +39,44 @@ public class MovingCharacter : MonoBehaviour
     void Update()
     {
         MovingSpeed = -(Vector3.Dot(SharkTransform.forward, navmeshagent.velocity));
-        Debug.Log(MovingSpeed);
+        //Debug.Log(MovingSpeed);
 
-        /*
-        IsMoving = CheckIfMoving();
-        if (IsMoving)
+        if(_gamemanager.IsPauseMenu == false && _gamemanager.IsTitleScreen == false)
         {
-            speedacceleration += 0.1f;
-        } */
+            IsAbletoEat = true;
+        }
 
-        Debug.Log(CalculateSpeed());
-
-        //materialshark.SetFloat("_MoveSpeed_1", Mathf.Lerp());
+        if(CheckIfMoving() == true)
+        {
+            materialshark.SetFloat("_IsMoving", 1f);
+        }
+        else
+        {
+            materialshark.SetFloat("_IsMoving", 0f);
+        }
 
         var mouseRay = MainCamera.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(mouseRay.origin, mouseRay.direction * 100f, Color.red);
 
-        RaycastHit hit;
-        if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out hit, 100f, LayerMask.GetMask("Ground")))
-            {
-            var Destination = hit.point;
-            Debug.DrawRay(Destination, Vector3.up * 3f, Color.red);
-            navmeshagent.SetDestination(Destination);
-        }
-
-        RaycastHit normalhit;
-        if (Physics.Raycast(SharkTransform.position, Vector3.down, out normalhit, 100f, LayerMask.GetMask("Ground")))
+        if (_gamemanager.IsPauseMenu == false && _gamemanager.IsTitleScreen == false  )
         {
-            Quaternion targetRotation = Quaternion.FromToRotation(SharkTransform.up,normalhit.normal) * SharkTransform.rotation;
-            SharkTransform.rotation = Quaternion.Slerp(SharkTransform.rotation, targetRotation, Time.deltaTime * 10f);
+
+            RaycastHit hit;
+            if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out hit, 100f, LayerMask.GetMask("Ground")))
+            {
+                var Destination = hit.point;
+                Debug.DrawRay(Destination, Vector3.up * 3f, Color.red);
+                navmeshagent.SetDestination(Destination);
+            }
+
+            RaycastHit normalhit;
+            if (Physics.Raycast(SharkTransform.position, Vector3.down, out normalhit, 100f, LayerMask.GetMask("Ground")))
+            {
+                Quaternion targetRotation = Quaternion.FromToRotation(SharkTransform.up, normalhit.normal) * SharkTransform.rotation;
+                //targetRotation.y = SharkTransform.rotation.y;
+                SharkTransform.rotation = Quaternion.Slerp(SharkTransform.rotation, targetRotation, Time.deltaTime * 10f);
+
+            }
         }
 
     }
@@ -78,28 +94,11 @@ public class MovingCharacter : MonoBehaviour
         }
     }
 
-    public float CalculateSpeed()
+    public void IncrementeScoring()
     {
-        IsMoving = CheckIfMoving();
-        if (IsMoving && speedacceleration <= 3.5f)
-        {
-            speedacceleration += 0.1f * Time.deltaTime;
-        }
-        else
-        {
-            if(speedacceleration >= 0)
-            {
-                speedacceleration -= 0.1f * Time.deltaTime;
-            }
-        }
-
-        //float currentacceleratio
-        
-
-
-        //Mathf.Lerp()
-
-        return speedacceleration;
-
+        scoremanager.score++;
     }
+
+
+
 }
