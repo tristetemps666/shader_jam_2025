@@ -10,6 +10,7 @@ public class FollowDuckPosition : MonoBehaviour
     [SerializeField]
     Vector2 _offset;
 
+
     private RectTransform _rectTransform;
     void Start()
     {
@@ -20,7 +21,6 @@ public class FollowDuckPosition : MonoBehaviour
     void Update()
     {
         Vector2 screenPositionToFollow = Camera.main.WorldToScreenPoint(_transformToFollow.position);
-        Debug.Log("PosToFollow : " + screenPositionToFollow);
         _rectTransform.localPosition = new Vector3(screenPositionToFollow.x-Camera.main.pixelWidth/2f+_offset.x,screenPositionToFollow.y-Camera.main.pixelHeight/2f+_offset.y,0f);
     }
 }
