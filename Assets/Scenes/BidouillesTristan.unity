@@ -2095,7 +2095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &973803296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3060,9 +3060,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.28034887, g: 0.7924528, b: 0.5488912, a: 1}
-    m_HighlightedColor: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3078,13 +3078,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 661496533}
+  m_TargetGraphic: {fileID: 1675573116}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1935997346}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: UnPauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3832,6 +3832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2021523124}
   - component: {fileID: 2021523125}
+  - component: {fileID: 2021523126}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -3889,6 +3890,21 @@ MonoBehaviour:
   _gameCanvasGroup: {fileID: 991423408}
   _instructionsCanvasGroup: {fileID: 1428567472}
   timeMainMenuFade: 1
+--- !u!114 &2021523126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021523123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beaaf6e1dd09fd347a4e427921034b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentTrees: {fileID: 526309519}
+  _textTemplate: {fileID: 449964496}
+  _parentUIPause: {fileID: 1037940463}
 --- !u!1001 &2071467422
 PrefabInstance:
   m_ObjectHideFlags: 0

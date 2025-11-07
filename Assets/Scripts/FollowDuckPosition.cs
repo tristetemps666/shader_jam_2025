@@ -10,8 +10,13 @@ public class FollowDuckPosition : MonoBehaviour
     [SerializeField]
     Vector2 _offset;
 
-
     private RectTransform _rectTransform;
+
+    public void SetTransformToFollow(Transform transformToFollow)
+    {
+        _transformToFollow = transformToFollow;
+    }
+
     void Start()
     {
         _rectTransform = GetComponent<RectTransform>();
@@ -20,7 +25,13 @@ public class FollowDuckPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 screenPositionToFollow = Camera.main.WorldToScreenPoint(_transformToFollow.position);
-        _rectTransform.localPosition = new Vector3(screenPositionToFollow.x-Camera.main.pixelWidth/2f+_offset.x,screenPositionToFollow.y-Camera.main.pixelHeight/2f+_offset.y,0f);
+        Vector2 screenPositionToFollow = Camera.main.WorldToScreenPoint(
+            _transformToFollow.position
+        );
+        _rectTransform.localPosition = new Vector3(
+            screenPositionToFollow.x - Camera.main.pixelWidth / 2f + _offset.x,
+            screenPositionToFollow.y - Camera.main.pixelHeight / 2f + _offset.y,
+            0f
+        );
     }
 }

@@ -19,6 +19,10 @@ public class AnimateScale : MonoBehaviour
 
     public void PlayAnimation()
     {
+        if (!gameObject.activeSelf)
+        {
+            return;
+        }
         Debug.Log("Test");
         StartCoroutine(UpdateAnimation());
     }
@@ -50,7 +54,6 @@ public class AnimateScale : MonoBehaviour
             {
                 continue;
             }
-
 
             if (_rectTransform != null)
             {
