@@ -9,12 +9,13 @@ public class PlayerCollectibleManager : MonoBehaviour
     [SerializeField, ReadOnly(true)]
     private int _totalCoinAmount = 0;
 
+    public int coinAmmout => _totalCoinAmount;
+
     public void CollectCoin(int coinValue, Transform coinPosition)
     {
         _totalCoinAmount += coinValue;
         OnCoinAmmountIncrease.Invoke(_totalCoinAmount);
     }
-
 
     private void Start() { }
 

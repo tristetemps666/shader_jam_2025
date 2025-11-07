@@ -10,6 +10,7 @@ public enum GameState
     MainMenu,
     InGame,
     InPause,
+    InWin,
 };
 
 public class GameManager : MonoBehaviour
@@ -20,12 +21,19 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnGamePaused = new();
     public UnityEvent OnGameStarted = new();
 
+    public int ammountOfCoinToWin => _valueForTheWin;
+
     [SerializeField]
     private UIManager _uiManager;
 
     [SerializeField]
     private AgentBehavior _playerBehavior;
     private NavMeshAgent _playerNavMeshAgent;
+
+    private PlayerCollectibleManager _playerCollectible;
+
+    [SerializeField]
+    private int _valueForTheWin = 50;
 
     private float _initialPlayerSpeed = 0f;
 
@@ -87,6 +95,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _playerNavMeshAgent = _playerBehavior.GetComponent<NavMeshAgent>();
+        _playerCollectible = _playerBehavior.GetComponent<PlayerCollectibleManager>();
+
         _initialPlayerSpeed = _playerNavMeshAgent.speed;
 
         _uiInputs.Enable();
@@ -100,6 +110,7 @@ public class GameManager : MonoBehaviour
         _uiInputs["UnPause"].Disable();
 
         _uiManager.OnInstructionFadeInEnd.AddListener(EnablePlayerControls);
+        _playerCollectible.OnCoinAmmountIncrease.AddListener(CheckWinCondition);
 
         MainMenu();
     }
@@ -125,6 +136,24 @@ public class GameManager : MonoBehaviour
         _uiInputs["Start"].Disable();
 
         OnGameStarted.Invoke();
+    }
+
+    private void CheckWinCondition(int? newCoinAmmount)
+    {
+        if (newCoinAmmount.Value >= _valueForTheWin)
+        {
+            WinGame();
+        }
+    }
+
+    private void WinGame()
+    {
+        _uiManager.SetWinUI();
+
+        _playerBehavior.enabled = false;
+        _uiInputs["Pause"].Disable();
+
+        _gameState = GameState.InWin;
     }
 
     private void EnablePlayerControls()

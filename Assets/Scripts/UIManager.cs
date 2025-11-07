@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,6 +24,12 @@ public class UIManager : MonoBehaviour
     CanvasGroup _instructionsCanvasGroup;
 
     [SerializeField]
+    CanvasGroup _winCanvasGroup;
+
+    [SerializeField]
+    TextMeshProUGUI _wintext;
+
+    [SerializeField]
     float timeMainMenuFade = 2f;
 
     void Start() { }
@@ -34,6 +41,7 @@ public class UIManager : MonoBehaviour
     {
         _mainMenuCanvasGroup.gameObject.SetActive(false);
         _pauseMenuCanvasGroup.gameObject.SetActive(false);
+        _winCanvasGroup.gameObject.SetActive(false);
 
         _gameCanvasGroup.gameObject.SetActive(true);
     }
@@ -43,6 +51,7 @@ public class UIManager : MonoBehaviour
         _mainMenuCanvasGroup.gameObject.SetActive(false);
         _gameCanvasGroup.gameObject.SetActive(false);
         _instructionsCanvasGroup.gameObject.SetActive(false);
+        _winCanvasGroup.gameObject.SetActive(false);
 
         _pauseMenuCanvasGroup.gameObject.SetActive(true);
     }
@@ -52,6 +61,7 @@ public class UIManager : MonoBehaviour
         _gameCanvasGroup.gameObject.SetActive(false);
         _pauseMenuCanvasGroup.gameObject.SetActive(false);
         _instructionsCanvasGroup.gameObject.SetActive(false);
+        _winCanvasGroup.gameObject.SetActive(false);
 
         _mainMenuCanvasGroup.gameObject.SetActive(true);
     }
@@ -94,6 +104,27 @@ public class UIManager : MonoBehaviour
         if (eventToCall != null)
         {
             eventToCall.Invoke();
+        }
+    }
+
+    public void SetWinUI()
+    {
+        _winCanvasGroup.gameObject.SetActive(true);
+
+        _mainMenuCanvasGroup.gameObject.SetActive(false);
+        _gameCanvasGroup.gameObject.SetActive(false);
+        _instructionsCanvasGroup.gameObject.SetActive(false);
+        _pauseMenuCanvasGroup.gameObject.SetActive(false);
+
+        StartCoroutine(WinUIAnimation());
+    }
+
+    private IEnumerator WinUIAnimation()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            _wintext.text += "WIN WIN WIN \n";
+            yield return new WaitForSeconds(0.7f);
         }
     }
 }
