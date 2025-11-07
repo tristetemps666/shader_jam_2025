@@ -67,11 +67,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Direction: 45
     - _QueueControl: 0
     - _QueueOffset: 0
     - _startOffset: 0.57
-    - _waveSpeed: 3
-    - _waveStrength: 0.2
+    - _waveSpeed: 2
+    - _waveStrength: 0.15
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
