@@ -17,6 +17,9 @@ public class TreesUis : MonoBehaviour
     [SerializeField]
     private GameObject _parentUIPause;
 
+    [SerializeField]
+    private Color _treeColor;
+
     [SerializeField, ReadOnly(true)]
     private List<Collectible> _listTreeCollectible = new List<Collectible>();
 
@@ -45,6 +48,7 @@ public class TreesUis : MonoBehaviour
             newTreeUI.name = "treeUI" + i.ToString();
             var texTreeUI = newTreeUI.GetComponent<TextMeshProUGUI>();
             texTreeUI.text = uiTreeString;
+            texTreeUI.color = _treeColor;
             var followUIPosition = newTreeUI.AddComponent<FollowDuckPosition>();
             followUIPosition.SetTransformToFollow(_listTreeCollectible[i].transform);
 

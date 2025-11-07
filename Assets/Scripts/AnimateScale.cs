@@ -23,6 +23,7 @@ public class AnimateScale : MonoBehaviour
         {
             return;
         }
+
         Debug.Log("Test");
         StartCoroutine(UpdateAnimation());
     }
