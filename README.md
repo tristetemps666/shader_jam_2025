@@ -3,8 +3,6 @@
 
 Rendu du projet Unity.
 
-Vous trouverez aussi dans Build.rar la build jouable du projet, et ici présent un README détaillant le fonctionnement du jeu.
-
 Vous trouverez ici un README détaillant le fonctionnement du jeu, ainsi qu'une build jouable dans build.rar.
 
 Pitch
