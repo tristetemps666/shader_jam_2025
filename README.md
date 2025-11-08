@@ -2,7 +2,12 @@
 ![ezgif-206f61ef265f10b1](https://github.com/user-attachments/assets/a7dae44f-854e-43e9-9b6b-b3604d5d9564)
 
 Rendu du projet Unity.
+
 Vous trouverez aussi dans Build.rar la build jouable du projet, et ici présent un README détaillant le fonctionnement du jeu.
+
+Vous trouverez ici un README détaillant le fonctionnement du jeu, ainsi que : 
+
+- Deux builds : Build.rar, déposé avant la date limite de rendu, et Build2.rar, un polish du projet.
 
 
 Pitch
@@ -21,12 +26,8 @@ Liste des choses réalisés en lien avec le cours
 - Animation
 - IA et pathfinding
 - Menu titre, menu pause
-
-  Todo :
-  - SFX
-  - UI overlay
-  - Etat de fin de jeu
-
+- SFX
+- Etat de fin de jeu
 
 Schémas de contrôle
 -
