@@ -13,12 +13,15 @@ public class ScoobySnack : MonoBehaviour
     [SerializeField] Mesh[] fishmeshes;
     [SerializeField] MeshFilter _meshFilter;
 
+    private GameManager _gameManager;
+
     bool IsActive = true;
     
 
     // Start iscalled once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _gameManager = FindFirstObjectByType<GameManager>();
         _audioSource = GetComponent<AudioSource>();
         _particlesystem = GetComponentInChildren<ParticleSystem>();
         _agent = GetComponentInChildren<NavMeshAgent>();
@@ -52,6 +55,7 @@ public class ScoobySnack : MonoBehaviour
 
             Destroy(gameObject, 10);
             IsActive = false;
+            _gameManager.SnackCounts--;
         }
     }
 

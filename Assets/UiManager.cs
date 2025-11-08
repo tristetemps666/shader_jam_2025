@@ -8,7 +8,7 @@ public class UiManager : MonoBehaviour
 
     public CanvasGroup TitleCanvas;
     public CanvasGroup PauseCanvas;
-
+    public CanvasGroup WinCanvas;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -123,9 +123,9 @@ GameObject:
   - component: {fileID: 8238344338656324770}
   - component: {fileID: 7910684749450759719}
   - component: {fileID: 6935511155028084062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Snack
-  m_TagString: Untagged
+  m_TagString: Snacks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

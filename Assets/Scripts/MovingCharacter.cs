@@ -60,7 +60,7 @@ public class MovingCharacter : MonoBehaviour
         var mouseRay = MainCamera.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(mouseRay.origin, mouseRay.direction * 100f, Color.red);
 
-        if (_gamemanager.IsPauseMenu == false && _gamemanager.IsTitleScreen == false  )
+        if (_gamemanager.IsPauseMenu == false && _gamemanager.IsTitleScreen == false )
         {
 
             RaycastHit hit;

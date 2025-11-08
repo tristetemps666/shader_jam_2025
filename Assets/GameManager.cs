@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -8,12 +9,16 @@ public class GameManager : MonoBehaviour
     public bool IsPauseMenu = false;
     public bool IsWin = false;
 
+    public int SnackCounts;
+
     [SerializeField] UiManager uiManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //SnackCounts = chercher le collectible et la lenght
+        SnackCounts = GameObject.FindGameObjectsWithTag("Snacks").Length;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -35,6 +40,12 @@ public class GameManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
             DesactivatePauseMenu();
+
+        }
+
+        if (SnackCounts == 0) 
+        {
+            ActivateWinScreen();
 
         }
 
@@ -63,6 +74,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ActivateWinScreen()
+    {
+        uiManager.Appear(uiManager.WinCanvas);
+        IsWin = true;
+    }
+
     public void QuitGame()
     {
         if (IsPauseMenu)
@@ -70,6 +87,22 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 
+    }
+
+    public void RestartGame()
+    {
+        if (IsWin)
+        {
+            SceneManager.LoadScene("TPLampinScene");
+        }
+    }
+
+    public void QuitGameOnWin()
+    {
+        if (IsWin)
+        {
+            Application.Quit();
+        }
     }
 
 
