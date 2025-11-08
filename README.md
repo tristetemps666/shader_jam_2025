@@ -5,10 +5,7 @@ Rendu du projet Unity.
 
 Vous trouverez aussi dans Build.rar la build jouable du projet, et ici présent un README détaillant le fonctionnement du jeu.
 
-Vous trouverez ici un README détaillant le fonctionnement du jeu, ainsi que : 
-
-- Deux builds : Build.rar, déposé avant la date limite de rendu, et Build2.rar, un polish du projet.
-
+Vous trouverez ici un README détaillant le fonctionnement du jeu, ainsi qu'une build jouable dans build.rar.
 
 Pitch
 -
