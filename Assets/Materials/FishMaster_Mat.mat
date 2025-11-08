@@ -50,6 +50,7 @@ Material:
     - _FishStrenghtY: 4
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RandomOffset: 0
     - _SmoothFactor: 6
     - _TimeFactor: 7
     - _TimeFactorY: 2

@@ -5,6 +5,8 @@ using UnityEngine.AI;
 public class ScoobySnack : MonoBehaviour
 {
     ParticleSystem _particlesystem;
+    AudioSource _audioSource;
+    [SerializeField] AudioClip[] clips;
     [SerializeField] MeshRenderer _meshRenderer;
     [SerializeField] ParticleSystem _fishrenderer; //deprecated
     NavMeshAgent _agent;
@@ -17,6 +19,7 @@ public class ScoobySnack : MonoBehaviour
     // Start iscalled once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _particlesystem = GetComponentInChildren<ParticleSystem>();
         _agent = GetComponentInChildren<NavMeshAgent>();
         _particlesystem.Stop();
@@ -38,9 +41,9 @@ public class ScoobySnack : MonoBehaviour
     {
         MovingCharacter othergameobject = other.GetComponentInParent<MovingCharacter>();
 
-
         if(IsActive == true && othergameobject.IsAbletoEat )
         {
+            _audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
             othergameobject.IncrementeScoring();
             _particlesystem.Play();
             _meshRenderer.enabled = false;
