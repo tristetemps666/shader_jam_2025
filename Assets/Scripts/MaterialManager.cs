@@ -1,3 +1,4 @@
+using System.Collections;
 using System.ComponentModel;
 using UnityEditor;
 using UnityEngine;
@@ -15,6 +16,14 @@ public class MaterialManager : MonoBehaviour
 
     [SerializeField]
     private Vector2 mousePosition2D;
+
+    [SerializeField]
+    private AnimationCurve _heigthAnimationOnClick;
+
+    [SerializeField]
+    float _heightAnimationSpeed = 1f;
+
+    bool _isAnimatingHeight = false;
 
     private Material _material;
     private Renderer _renderer;
@@ -43,13 +52,39 @@ public class MaterialManager : MonoBehaviour
 
         Vector2 objectDisplacedPosition2D = _camera.WorldToScreenPoint(transform.position);
 
-        _material.SetVector("_MouseScreenPosition", mousePosition2D);
         _material.SetVector("_objectScreenPosition", objectDisplacedPosition2D);
         _material.SetVector("_ObjectToCheckPosition", objectScreenPosition2D);
+
+        if (!_isAnimatingHeight)
+        {
+            _material.SetVector("_MouseScreenPosition", mousePosition2D);
+            _material.SetFloat("_MouseDisplacementFactor", 0f);
+        }
 
         if (_renderer.material != _material)
         {
             _material = _renderer.material;
         }
+    }
+
+    public void RunHeightAnimation()
+    {
+        StartCoroutine(HeightAnimation());
+    }
+
+    IEnumerator HeightAnimation()
+    {
+        float t = 0;
+        _isAnimatingHeight = true;
+        while (t < 1)
+        {
+            t += Time.deltaTime * _heightAnimationSpeed;
+            float heightFactor = _heigthAnimationOnClick.Evaluate(t);
+            _material.SetFloat("_MouseDisplacementFactor", heightFactor);
+            yield return null;
+        }
+        _material.SetFloat("_MouseDisplacementFactor", 0f);
+
+        _isAnimatingHeight = false;
     }
 }

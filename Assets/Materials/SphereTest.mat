@@ -59,6 +59,9 @@ Material:
     - _ChooseDistanceCalculation: 0
     - _Float: 0.78
     - _Invert: 0
+    - _MouseDisplacementFactor: 1
+    - _MouseDisplacementRadius: 0.3
+    - _MouseMaxDisplacement: 1.05
     - _QueueControl: 1
     - _QueueOffset: 0
     - _checkDistanceForEveryPixel: 1

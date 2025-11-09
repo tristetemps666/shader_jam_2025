@@ -3645,6 +3645,76 @@ MonoBehaviour:
   _camera: {fileID: 1952039765}
   _transformToCheck: {fileID: 1628206079}
   mousePosition2D: {x: 0, y: 0}
+  _heigthAnimationOnClick:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 10.48584
+      outSlope: 10.48584
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.0953667
+      value: 1
+      inSlope: 3.0519083
+      outSlope: 3.0519083
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.31117666
+      value: 0.054315716
+      inSlope: 1.8308135
+      outSlope: 1.8308135
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.087544814
+    - serializedVersion: 3
+      time: 0.432939
+      value: 0.37679368
+      inSlope: -1.5548806
+      outSlope: -1.5548806
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14373465
+    - serializedVersion: 3
+      time: 0.5687338
+      value: 0.04752093
+      inSlope: -0.0118396105
+      outSlope: -0.0118396105
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.209029
+    - serializedVersion: 3
+      time: 0.6894146
+      value: 0.14537536
+      inSlope: -0.018791826
+      outSlope: -0.018791826
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.44178313
+      outSlope: -0.44178313
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.23548701
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _heightAnimationSpeed: 1
 --- !u!4 &1474603288 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 95c5e8edbdf2086409f36ac4c88d0735, type: 3}
@@ -5368,9 +5438,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3619336221946979308, guid: 1433603f51ea98f4990ee76e973039db, type: 3}
+      propertyPath: OnDestinationSelected.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619336221946979308, guid: 1433603f51ea98f4990ee76e973039db, type: 3}
+      propertyPath: OnDestinationSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619336221946979308, guid: 1433603f51ea98f4990ee76e973039db, type: 3}
       propertyPath: OnDestinationSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 680697793}
+    - target: {fileID: 3619336221946979308, guid: 1433603f51ea98f4990ee76e973039db, type: 3}
+      propertyPath: OnDestinationSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1474603285}
+    - target: {fileID: 3619336221946979308, guid: 1433603f51ea98f4990ee76e973039db, type: 3}
+      propertyPath: OnDestinationSelected.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619336221946979308, guid: 1433603f51ea98f4990ee76e973039db, type: 3}
+      propertyPath: OnDestinationSelected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RunHeightAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619336221946979308, guid: 1433603f51ea98f4990ee76e973039db, type: 3}
+      propertyPath: OnDestinationSelected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MaterialManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619336221946979308, guid: 1433603f51ea98f4990ee76e973039db, type: 3}
+      propertyPath: OnDestinationSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: positionSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619336221946979308, guid: 1433603f51ea98f4990ee76e973039db, type: 3}
+      propertyPath: OnDestinationSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4579871226757229426, guid: 1433603f51ea98f4990ee76e973039db, type: 3}
       propertyPath: m_Name
       value: DuckBarkVFX
