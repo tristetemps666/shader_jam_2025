@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Snacks
+  - StartCollider
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - Ground
   - Player
   - Snacks
-  - 
-  - 
+  - Particles
+  - Raycast
   - 
   - 
   - 

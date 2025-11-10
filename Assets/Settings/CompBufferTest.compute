@@ -1,0 +1,23 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> Result;
+RWTexture2D<float4> updateTexture;
+
+[numthreads(16,16,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    // TODO: insert actual code here!
+    float4 newColor = float4(
+        max(Result[id.xy].r,updateTexture[id.xy].r),
+        max(Result[id.xy].g,updateTexture[id.xy].g),
+        max(Result[id.xy].b,updateTexture[id.xy].b),
+        max(Result[id.xy].a,updateTexture[id.xy].a)
+    );
+
+    Result[id.xy] = newColor;
+    // Result[id.xy] = float4(0,1,1,1);
+
+}

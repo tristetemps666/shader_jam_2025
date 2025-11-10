@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PetrolMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: 7aaa3fd7b5f529946827e5b9e2748afa, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 4500
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _RenderTexture:
+        m_Texture: {fileID: 8400000, guid: c51ab4c806ebb6746b1f95fefdf4d6b5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_5a6567ac04cc485b9e9e059c93aa03cd_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 344ed2c3984e0d64bbd87002b8e81a91, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_91a994158723485a999294ed8060c2a0_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_fe80c90e2eb54f5a8ae850cc901ab2bf_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 41fe7e9f4bd65bc41a9c00b713cc9893, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 0.1
+    - _Distance: 5
+    - _HighlightThreshold: 0.45
+    - _Invert: 0
+    - _MainThreshold: 0.3
+    - _NoiseFactor: 0.14
+    - _Normal_Strenght: 1
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _RefractionStrenght: 2
+    - _RippleCount: 5
+    - _RippleSpeed: 2
+    - _RippleStrenght: 1
+    - _WaterDepth: 7.26
+    - _Wave_frequency: 1
+    - _Wave_speed: 2
+    - _distanceforMaxDisplacement: 0.1
+    - _distanceforMinDisplacement: 0.001
+    - _stepParam: 0.9
+    m_Colors:
+    - _DepthWater: {r: 0, g: 0.03529412, b: 0.094117604, a: 1}
+    - _Foam_color: {r: 1, g: 1, b: 1, a: 0}
+    - _MinMaxDistance: {r: 3, g: 14.3, b: 0, a: 0}
+    - _MouseScreenPosition: {r: 0, g: 0, b: 0, a: 0}
+    - _RippleCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _ShallowWater: {r: 0.31760997, g: 0.742063, b: 1, a: 1}
+    - _objectScreenPosition: {r: 0, g: 0, b: 0, a: 0}
+    - _offset: {r: 0.13, g: 0.15, b: 0, a: 0}
+    - _wave_direction_xz: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &1949856123623270839
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 10

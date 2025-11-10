@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef07e2017f181314292c456b23a92f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trail: {fileID: 0}
   SharkTransform: {fileID: 1259751554972674392}
   _renderer: {fileID: 7370180007025504330}
   IsAbletoEat: 0

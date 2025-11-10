@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private bool AlreadyClick = false;
     public bool IsTitleScreen = true;
     public bool IsPauseMenu = false;
     public bool IsWin = false;
 
     public int SnackCounts;
+    public int StartColliderCounts;
 
     [SerializeField] UiManager uiManager;
 
@@ -18,18 +20,24 @@ public class GameManager : MonoBehaviour
     {
         //SnackCounts = chercher le collectible et la lenght
         SnackCounts = GameObject.FindGameObjectsWithTag("Snacks").Length;
+        StartColliderCounts = GameObject.FindGameObjectsWithTag("StartCollider").Length;
         Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(StartColliderCounts == 0 && AlreadyClick == false)
+        {
+            ActivateClickScreen();  
+            AlreadyClick = true;
+        }
         
-
-        if(IsTitleScreen && Input.anyKeyDown)
+        if(IsTitleScreen && Input.anyKeyDown && StartColliderCounts ==0)
         {
             IsTitleScreen = false;
-
+            DestroyColliderCanvas();
+            DesactivateClickScreen();
             Invoke("DeleteTitleScreen", 3);
         }
 
@@ -51,10 +59,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void DeleteTitleScreen()
+    public void DeleteTitleScreen()
     {
         uiManager.Disappear(uiManager.TitleCanvas);
-
     }
 
     void ActivatePauseMenu()
@@ -79,6 +86,18 @@ public class GameManager : MonoBehaviour
         uiManager.Appear(uiManager.WinCanvas);
         IsWin = true;
     }
+
+    void DesactivateClickScreen()
+    {
+        uiManager.Disappear(uiManager.ClickCanvas);
+        
+    }
+
+    void ActivateClickScreen()
+    {
+        uiManager.Appear(uiManager.ClickCanvas);
+    }
+
 
     public void QuitGame()
     {
@@ -105,5 +124,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void DecreaseColliderCount()
+    {
+        StartColliderCounts--;
+    }
+
+    void DestroyColliderCanvas()
+    {
+        Destroy(uiManager.ColliderCanvas);
+    }
 
 }
