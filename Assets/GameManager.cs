@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
             Invoke("DeleteTitleScreen", 3);
         }
 
-        if(IsTitleScreen == false && IsPauseMenu == false && Input.GetKeyDown(KeyCode.Escape))
+        if(IsTitleScreen == false && IsPauseMenu == false && Input.GetKeyDown(KeyCode.Escape) && IsWin == false)
         {
             ActivatePauseMenu();
         }
